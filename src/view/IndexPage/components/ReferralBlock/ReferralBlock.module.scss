@@ -1,0 +1,28 @@
+.wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: $color-light;
+  padding: 20px 16px 12px 16px;
+  border-radius: 12px;
+
+  .referral-block{
+    @include flex-column();
+    gap: 8px;
+    .referral-title{
+      @include text-Body1();
+      color: $color-silver-30;
+    }
+    .referral-value{
+      @include text-Subtitle2();
+      color:$color-dark;
+    }
+  }
+
+  .referral-button{
+    border-radius: 20px;
+    padding: 8px 12px;
+    background: $color-orange-60;
+    @include text-Body1();
+  }
+}

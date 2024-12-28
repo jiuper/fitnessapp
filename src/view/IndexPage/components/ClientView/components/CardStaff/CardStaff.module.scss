@@ -1,0 +1,45 @@
+.wrapper{
+  @include flex-column();
+  align-items: center;
+  border-radius: 12px;
+  background: $color-light;
+  max-height: 208px;
+  padding: 16px;
+  height: 100%;
+  width: 136px;
+}
+.avatar-container{
+  position: relative;
+  width: 96px;
+  height: 96px;
+
+  .avatar{
+    width: 96px;
+    height: 96px;
+    [data-pc-section="image"]{
+      object-fit: cover;
+      border-radius: 100%;
+    }
+  }
+  .badge{
+    position: absolute;
+    top: 0;
+    right: -10px;
+    background: $color-orange-60;
+  }
+}
+.body{
+  @include flex-column();
+  align-items: center;
+    .name{
+      @include text-Subtitle3();
+      color:$color-shading-60;
+      text-align: center;
+
+    }
+    .post{
+      @include text-Body3();
+      color: $color-silver-30;
+      text-align: center;
+    }
+}

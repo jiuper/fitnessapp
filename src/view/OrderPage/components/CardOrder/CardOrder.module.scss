@@ -1,0 +1,67 @@
+.wrapper{
+  display: flex;
+  justify-content: center;
+  border-radius: 12px;
+  background: $color-light;
+  max-height: 80px;
+  height: 100%;
+  width: 100%;
+}
+.avatar-container{
+  position: relative;
+
+  .avatar{
+    width: 80px;
+    height: 80px;
+    [data-pc-section="image"]{
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0px 2px 4px 0px rgba(255, 118, 72, 0.12), 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+    }
+  }
+  .badge{
+    position: absolute;
+    top: 0;
+    right: -10px;
+    background: $color-orange-60;
+  }
+}
+.body{
+  padding: 12px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  width: 100%;
+  .info{
+    @include flex-column();
+    width: 100%;
+  }
+
+  .name{
+    @include flex-column();
+    gap: 4px;
+    @include text-Subtitle2();
+    color:$color-shading-60;
+    
+  }
+  .post-wrapper{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: space-between;
+
+    .post{
+      @include text-Body2();
+      color: $color-silver-30
+    }
+  }
+  .button{
+
+    &[data-pc-name="button"]{
+      width: fit-content;
+    }
+    [data-pc-section="label"]{
+      display: none;
+    }
+  }
+}

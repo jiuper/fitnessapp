@@ -1,0 +1,12 @@
+.wrapper{
+  @include flex-column();
+  gap: 8px;
+}
+.title{
+  @include text-Title();
+}
+.cards{
+  @include flex-column();
+  gap: 12px;
+}
+

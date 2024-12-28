@@ -1,0 +1,15 @@
+.wrapper{
+  @include flex-column();
+  gap: 8px;
+}
+.title{
+  @include text-Title();
+}
+.list{
+  @include flex-column();
+  gap: 8px;
+  margin-bottom: 80px;
+}
+.not-found{
+  @include text-Body1();
+}

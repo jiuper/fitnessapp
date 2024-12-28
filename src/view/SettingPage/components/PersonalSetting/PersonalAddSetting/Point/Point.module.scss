@@ -1,0 +1,17 @@
+.point{
+  @include flex-row();
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding-inline: 8px;
+
+  .title{
+    width: 100%;
+    @include text-Subtitle2();
+    color: $color-dark;
+  }
+  .icon{
+    width: 24px;
+    height: 24px;
+  }
+}

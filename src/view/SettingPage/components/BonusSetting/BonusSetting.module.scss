@@ -1,0 +1,56 @@
+.bonus-setting{
+  background: #F7F7F7;
+
+}
+.wrapper{
+  @include flex-column();
+  gap: 24px;
+}
+.network{
+  padding: 12px 8px;
+  @include flex-column();
+  gap: 16px;
+
+  .title{
+    @include text-Subtitle3();
+    color: $color-orange-60;
+  }
+
+  .list{
+    @include flex-column();
+    gap: 12px;
+
+
+
+    .card{
+      @include flex-row();
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      gap: 8px;
+      padding: 12px 12px 12px 8px;
+
+      span{
+        @include text-Subtitle2();
+        color: $color-shading-60;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        width: 287px;
+      }
+      .close{
+        width: 36px;
+        height: 36px;
+        @include flex-center();
+        border-radius: 50%;
+        cursor: pointer;
+        background: rgba(0, 0, 0, 0.04);
+
+        .close-icon{
+          fill: #404040;
+        }
+      }
+    }
+  }
+}

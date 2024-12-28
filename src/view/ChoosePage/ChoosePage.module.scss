@@ -1,0 +1,51 @@
+.wrapper{
+  @include flex-column();
+  gap: 8px;
+}
+.title{
+  @include text-Title();
+}
+.list{
+  @include flex-column();
+  gap: 8px;
+  margin-bottom: 80px;
+}
+
+.card{
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  height: 128px;
+  background: $color-light;
+  border-radius: 12px;
+  cursor: pointer;
+  padding-right: 12px;
+
+  &:last-child{
+    border-bottom: none;
+  }
+}
+.avatar{
+  width: 80px;
+  height: 128px;
+  object-fit: cover;
+  border-radius: 8px;
+
+}
+.info{
+  @include flex-column();
+  gap: 5px;
+  width: 100%;
+}
+
+.name{
+  @include text-Subtitle2();
+  color: $color-shading-60;
+}
+.post{
+  @include text-Body2();
+  color:$color-silver-30;
+}
+.arrow{
+  fill: $color-orange-60;
+}

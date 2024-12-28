@@ -1,0 +1,20 @@
+.title{
+  @include text-Subtitle3();
+  padding:16px;
+  color: $color-silver-30;
+}
+
+.list{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-gap: 12px;
+  padding-bottom: 30px;
+  transition: .2s ease-out;
+  &.active{
+    margin-bottom: 150px;
+  }
+}
+.section{
+  @include flex-column();
+  gap: 8px;
+}

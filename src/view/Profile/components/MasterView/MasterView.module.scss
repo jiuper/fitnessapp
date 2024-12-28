@@ -1,0 +1,64 @@
+.master-profile{
+  background: #fff;
+}
+.header{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 8px;
+  .short-info{
+    @include flex-column();
+
+    .name{
+      @include text-Subtitle2();
+      color: $color-dark;
+    }
+    .post{
+      @include text-Body1();
+      color: $color-silver-30;
+    }
+  }
+
+  .avatar{
+    position: relative;
+    .badge{
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: $color-orange-60;
+    }
+  }
+}
+
+.body{
+  @include flex-column();
+  gap: 8px;
+  background: #F7F7F7;
+  padding: 12px 8px;
+  .list-services{
+    border-radius: 12px;
+    background:  #FFF;
+    padding: 8px;
+
+    .list-serv{
+      @include flex-row();
+      gap: 8px;
+      flex-wrap: wrap;
+
+      .title{
+        @include flex-center();
+        padding: 4px 8px;
+        border-radius: 30px;
+        border: 1px solid #FF8C00;
+        @include text-Overline;
+        color: #171717;
+      }
+    }
+  }
+
+
+  .list{
+    @include flex-column();
+    gap: 8px;
+  }
+}

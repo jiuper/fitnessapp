@@ -1,0 +1,57 @@
+.upload-image{
+  position: relative;
+}
+.list-btns {
+  position: absolute;
+  @include flex-column();
+  gap: 10px;
+  bottom: -12%;
+  right: 3%;
+
+  .secondary-btn {
+    top: 0;
+    left: 0;
+  }
+  .btn-edit{
+    border-radius: 100px;
+    background: var(--Custom-white, #FFF);
+    box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.15);
+    width: 56px;
+    height: 56px;
+    position: absolute;
+    opacity: 0;
+    transform: translateY(0px);
+    @include flex-center();
+    cursor: pointer;
+
+    &.remove{
+      background: #525252;
+    }
+
+    &.photo{
+      background: $color-orange-60;
+    }
+
+    &.image-btn{
+      background: #8E8EAD;
+    }
+
+    .btn-icon{
+      fill: $color-light;
+    }
+  }
+  .main-btn {
+    position: relative;
+    z-index: 10;
+    opacity: 1;
+
+    .btn-icon{
+      fill: #1c1b1f;
+      transition: $transition-default;
+      transform: rotate(90deg);
+      &.active{
+        transform: rotate(0deg);
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.address-company{
+  @include flex-column();
+  gap: 8px;
+  background: $color-light;
+  padding: 12px;
+  border-radius: 12px;
+}
+.top{
+  display: flex;
+  gap: 8px;
+}
+.info{
+  @include flex-column();
+  gap: 4px;
+
+  .city{
+    @include text-Body1();
+    color: $color-silver-50;
+  }
+
+  .map{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .address{
+      @include text-Headline1();
+      color: $color-shading-dark;
+    }
+  }
+
+  .address{
+    @include text-Body1();
+    color: $color-silver-50;
+  }
+}
+
+.avatar-company{
+  @include flex-center();
+  width: 48px;
+  height: 48px;
+  padding: 8px;
+  border-radius: 100%;
+  background: rgba(38, 26, 89, 0.90);
+  .avatar{
+    object-fit: cover;
+  }
+}
+
+.datetime{
+  @include flex-column();
+}

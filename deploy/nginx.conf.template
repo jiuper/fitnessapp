@@ -1,0 +1,24 @@
+server {
+    listen 80;
+    server_name __NGINX_SERVER_NAME__;
+
+    root /usr/share/nginx/html;
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+
+    location /api {
+        proxy_pass __NGINX_INTERNAL_API_URL__;
+    }
+
+    location /.well-known/acme-challenge/ {
+        root /usr/share/nginx/html;
+    }
+
+    # Перенаправление на HTTPS, если secure: true
+    __NGINX_REDIRECT_TO_HTTPS__
+}
+
+__NGINX_HTTPS_CONFIG__

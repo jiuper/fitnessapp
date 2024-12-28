@@ -1,0 +1,62 @@
+.wrapper{
+  @include flex-column();
+  gap: 8px;
+}
+.title{
+  @include text-Title();
+}
+
+.cards{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+}
+
+.card{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: $color-light;
+  border-radius: 12px;
+ @include text-Body1();
+  color: $color-shading-60;
+  height: 100%;
+}
+
+.phone{
+  display: flex;
+  align-items: center;
+}
+.list{
+  background: $color-light;
+  padding: 8px;
+  border-radius: 12px;
+  @include flex-column();
+  gap: 8px;
+}
+
+.date{
+  @include text-Subtitle2();
+  color: #000000;
+}
+
+.time{
+  @include text-Body3();
+  color: $color-silver-30;
+}
+.main{
+  width: 100%;
+  background: $color-light;
+  border-radius: 44px;
+  padding: 16px;
+  box-shadow: 0px -1px 12px 0px rgba(255, 118, 72, 0.12);
+  backdrop-filter: blur(20px);
+  margin: 15px 0;
+
+  button{
+    width: 100%;
+    border-radius: 44px;
+  }
+}

@@ -1,0 +1,64 @@
+.card-network {
+  @include flex-row();
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding:12px 16px ;
+  border-radius: 28px;
+  background: var(--Custom-plain_background, rgba(0, 0, 0, 0.04));
+  backdrop-filter: blur(10px);
+
+
+  .input-wrapper{
+    position: relative;
+    @include flex-column();
+    gap: 8px;
+    .input{
+      border: none;
+      outline: none;
+      background: transparent;
+      @include text-Subtitle2();
+      color: $color-shading-60;
+      width: 150px;
+    }
+
+    .error{
+      position: absolute;
+      bottom: -33px;
+      display: none;
+      @include text-Body3();
+      color: $color-red-60;
+
+      &.active{
+        display: block;
+      }
+    }
+  }
+
+  .text{
+    @include text-Subtitle2();
+    color: $color-shading-60;
+    width: 100%;
+  }
+
+
+  .icons{
+    @include flex-row();
+    align-items: center;
+    gap: 8px;
+    .icon-container{
+      width: 36px;
+      height: 36px;
+      @include flex-center();
+      border-radius: 50%;
+      cursor: pointer;
+      background: rgba(0, 0, 0, 0.04);
+
+      .icon{
+        fill: #404040;
+      }
+    }
+  }
+
+
+}

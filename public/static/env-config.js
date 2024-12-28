@@ -1,0 +1,1 @@
+window.VITE_BACKEND_URL = 'https://v2569113.hosted-by-vdsina.ru';

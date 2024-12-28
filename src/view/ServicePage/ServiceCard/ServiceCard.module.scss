@@ -1,0 +1,93 @@
+.card{
+    border-radius: 24px;
+    height: 252px;
+    @include flex-column();
+    position: relative;
+  }
+  .header{
+    border-radius: 24px 24px 0 0;
+    position: relative;
+    height: 100%;
+  }
+  .body{
+    border-radius: 24px;
+    height: 50%;
+    @include flex-row();
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    background: white;
+    width: 100%;
+    bottom: 0;
+    padding: 0px 12px;
+    gap: 8px;
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.02), 0px 32px 64px 0px rgba(0, 0, 0, 0.04);
+  }
+  .info{
+    @include flex-column();
+    gap: 8px;
+    height: 50%;
+  }
+  .title{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @include text-Body1();
+    color: $color-dark;
+    -webkit-line-clamp: 3;
+    height: 55px;
+    overflow-wrap: anywhere;
+  }
+  .subtitle{
+    overflow: hidden;
+    color: $color-shading-60;
+    text-overflow: ellipsis;
+    @include text-Body1();
+    font-weight: 600;
+    position: absolute;
+    padding: 2px 4px;
+    top: 10%;
+    right: 5%;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.50);
+    box-shadow: 0px 12px 24px 0px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(10px);
+  }
+  .subtitle-sale{
+    overflow: hidden;
+    color: $color-light;
+    text-overflow: ellipsis;
+    @include text-Body1();
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    padding: 0 4px;
+    border-radius: 10px;
+    background: #FF7648;
+    box-shadow: 0px 12px 24px 0px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(10px);
+  }
+
+.image{
+  border-radius: 24px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+
+.button{
+  border-radius: 20px;
+  border:  1px solid  rgba(0, 0, 0, 0.04);
+  padding: 8px 4px;
+  background: transparent;
+  @include text-Body1();
+  color: $color-dark-50;
+
+  span{
+    display: none;
+  }
+  &.isChoose{
+    background: $color-orange-60;
+  }
+
+}

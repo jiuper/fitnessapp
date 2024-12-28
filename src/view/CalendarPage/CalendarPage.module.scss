@@ -1,0 +1,23 @@
+.wrapper{
+  @include flex-column();
+  gap: 8px;
+  height: 100%;
+
+}
+.title{
+  @include text-Title();
+  padding: 8px;
+
+}
+.list{
+  @include flex-column();
+  padding: 8px;
+  gap: 8px;
+  background: $color-light;
+  height: fit-content;
+  border-radius: 16px 16px 0 0;
+  border-bottom:1px solid #F4EFF4;
+
+
+}
+

@@ -1,0 +1,222 @@
+@mixin hidden-scrollbar() {
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@mixin svg-color($color, $transition-duration: 0ms) {
+    transition: all $transition-duration;
+    fill: $color;
+    path {
+        transition: all $transition-duration;
+        fill: inherit;
+    }
+}
+
+@mixin flex-center() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin flex-column() {
+    display: flex;
+    flex-direction: column;
+}
+@mixin flex-row() {
+    display: flex;
+    flex-direction: row;
+}
+@mixin font-SegoeUI {
+    font-family: $font-poppins;
+}
+
+//@mixin text-Display1 {
+//    --fs: 96;
+//    --lh: 112;
+//    @include font-SegoeUI();
+//    font-weight: 600;
+//    font-size: 96px;
+//    line-height: 112px;
+//}
+//@mixin text-Display2 {
+//    --fs: 60;
+//    --lh: 72;
+//    @include font-SegoeUI();
+//    font-weight: 600;
+//    font-size: 60px;
+//    line-height: 72px;
+//}
+
+@mixin text-Display3 {
+    --fs: 32;
+    --lh: 38.4;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 38.4px */
+    letter-spacing: -0.08px;
+}
+@mixin text-Headline1 {
+    --fs: 24;
+    --lh: 28;
+    @include font-SegoeUI();
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px; /* 116.667% */
+    letter-spacing: 0.07px;
+}
+@mixin text-Subtitle1 {
+    --fs: 18;
+    --lh: 22;
+    @include font-SegoeUI();
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px; /* 122.222% */
+    letter-spacing: -0.36px;
+}
+@mixin text-Subtitle2 {
+    --fs: 17;
+    --lh: 22;
+    @include font-SegoeUI();
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 22px; /* 129.412% */
+    letter-spacing: -0.4px;
+}
+@mixin text-Subtitle3 {
+    --fs: 16;
+    --lh: 21;
+    @include font-SegoeUI();
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21px; /* 131.25% */
+    letter-spacing: -0.23px;
+}
+@mixin text-Subtitle4 {
+    --fs: 14;
+    --lh: 16.8;
+    @include font-SegoeUI();
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 120%; /* 16.8px */
+    letter-spacing: -0.15px;
+}
+@mixin text-Body1 {
+    --fs: 15;
+    --lh: 17;
+    @include font-SegoeUI();
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 17px; /* 113.333% */
+    letter-spacing: -0.23px;
+}
+@mixin text-Body2 {
+    --fs: 13;
+    --lh: 16;
+    @include font-SegoeUI();
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px; /* 123.077% */
+    letter-spacing: -0.08px;
+}
+@mixin text-Body3 {
+    --fs: 12;
+    --lh: 16;
+    @include font-SegoeUI();
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px; /* 133.333% */
+    letter-spacing: -0.08px;
+}
+@mixin text-Body4 {
+    --fs: 11;
+    --lh: 16;
+    @include font-SegoeUI();
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 16px; /* 145.455% */
+    letter-spacing: 0.1px;
+}
+@mixin text-input {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.15px;
+}
+@mixin text-Title {
+    @include text-Subtitle3();
+    text-align: center;
+    color: $color-shading-60;
+}
+@mixin text-Button {
+    --fs: 15;
+    --lh: 20;
+    @include font-SegoeUI();
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px; /* 133.333% */
+    letter-spacing: -0.23px;
+}
+//@mixin text-ButtonLink {
+//    --fs: 18;
+//    --lh: 28;
+//    @include font-SegoeUI();
+//    font-size: 18px;
+//    font-style: normal;
+//    font-weight: 600;
+//    line-height: 28px; /* 155.556% */
+//    letter-spacing: 0.1px;
+//    text-decoration: none;
+//}
+//@mixin text-ButtonSmall {
+//    --fs: 14;
+//    --lh: 20;
+//    @include font-SegoeUI();
+//    font-weight: 700;
+//    font-size: 14px;
+//    line-height: 20px;
+//    letter-spacing: 0.1px;
+//}
+
+@mixin text-Caption {
+    --fs: 12;
+    --lh: 22;
+    @include font-SegoeUI();
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: -0.36px;
+}
+
+@mixin text-Overline {
+    --fs: 10;
+    --lh: 16;
+    @include font-SegoeUI();
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px; /* 130% */
+    letter-spacing: 0.06px;
+}
+
+@mixin touch-hover($selector) {
+    @at-root {
+        @media (hover: hover) {
+            #{$selector}:hover {
+                @content;
+            }
+        }
+        @media (hover: none) {
+            #{$selector}:active {
+                @content;
+            }
+        }
+    }
+}
+
+@mixin hidden-scrollbar() {
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

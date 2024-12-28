@@ -1,0 +1,80 @@
+.wrapper{
+  @include flex-column();
+  gap: 8px;
+}
+.header{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 8px;
+  background: $color-light;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.10);
+  .short-info{
+    @include flex-column();
+
+    .name{
+      @include text-Subtitle2();
+      color: $color-dark;
+    }
+    .post{
+      @include text-Body1();
+      color: $color-silver-30;
+    }
+  }
+}
+
+.account{
+  @include flex-column();
+  gap: 16px;
+  background: $color-light;
+  padding: 12px 8px;
+
+  .title{
+    @include text-Subtitle3();
+    color: $color-orange-60;
+  }
+
+  .info{
+    @include flex-column();
+    gap: 12px;
+    width: 100%;
+  }
+
+}
+.setting{
+  @include flex-column();
+  gap: 16px;
+  background: $color-light;
+  padding: 12px 8px;
+  margin-bottom: 70px;
+
+  .title{
+    @include text-Subtitle3();
+    color: $color-orange-60;
+  }
+  .item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+
+    .name{
+      @include text-Subtitle2();
+      color: $color-dark;
+    }
+  }
+}
+.button{
+  padding: 16px;
+  @include flex-center();
+  border-radius: 44px;
+  background: $color-light;
+  box-shadow: 0px -1px 12px 0px rgba(255, 118, 72, 0.12);
+  backdrop-filter: blur(20px);
+
+  button{
+    width: 100%;
+  }
+}
+
+

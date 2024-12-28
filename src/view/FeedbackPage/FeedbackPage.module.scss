@@ -1,0 +1,48 @@
+.wrapper{
+  @include flex-column();
+  gap: 8px;
+}
+
+.header{
+  @include flex-column();
+  gap: 8px;
+  padding-bottom: 8px;
+}
+.rating-counter{
+  @include flex-center();
+  gap: 8px;
+}
+.title{
+  @include text-Title();
+}
+
+.rating{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  span{
+  @include text-Display3();
+    color: $color-dark;
+  }
+
+  .icon{
+    width: 40px;
+    height: 40px;
+  }
+}
+.counter{
+  @include flex-column();
+
+  span{
+    @include text-Body2();
+    color: $color-silver-60;
+  }
+}
+.list{
+  @include flex-column();
+  gap: 8px;
+  margin-bottom: 80px;
+}
+.not-found{
+  @include text-Body1();
+}

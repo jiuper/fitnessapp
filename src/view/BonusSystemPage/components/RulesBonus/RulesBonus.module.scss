@@ -1,0 +1,82 @@
+.wrapper{
+  height: 100%;
+  @include flex-column();
+
+  button{
+    @include text-Subtitle2();
+    font-weight: 600;
+    border-radius: 62px;
+  }
+}
+.rules-bonus {
+  background-image: url("@/shared/assets/image_2024-09-20_15-21-37.png");
+  background-position:  center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+.list{
+  @include flex-column();
+  gap: 24px;
+  height: 100%;
+
+  .item{
+    @include flex-column();
+    gap: 8px;
+
+    .caption{
+      @include text-Headline1();
+      color: $color-orange-60;
+      &.caption-card{
+        color: rgb(60,49,106);
+      }
+    }
+
+    .text{
+      @include text-Subtitle3();
+      font-weight: 400;
+      color: $color-silver-30;
+    }
+  }
+
+  .items{
+    @include flex-column();
+    gap: 8px;
+
+    .item{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: 64px;
+      gap: 8px;
+      border-radius: 28px;
+      background: var(--Custom-plain_background, rgba(0, 0, 0, 0.04));
+      backdrop-filter: blur(10px);
+      padding-left: 12px;
+
+      .info{
+        width: 100%;
+        @include flex-column();
+        gap: 8px;
+
+        .title{
+          @include text-Subtitle2();
+          font-weight: 500;
+          color: $color-dark;
+        }
+        .text{
+          @include text-Body3();
+          color: $color-silver-30;
+        }
+      }
+      .icon{
+        @include flex-center();
+        background: rgba(0, 0, 0, 0.04);
+        border-radius: var(--0, 0px) 20px 20px var(--0, 0px);
+        padding: 8px 12px;
+        height: 100%;
+      }
+    }
+  }
+}

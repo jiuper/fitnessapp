@@ -1,0 +1,38 @@
+.wrapper{
+  height: 100%;
+  @include flex-column();
+
+  button{
+    @include text-Subtitle2();
+    font-weight: 600;
+    border-radius: 62px;
+  }
+}
+.friends-bonus {
+  background-image: url("@/shared/assets/image_2024-09-20_15-21-36.png");
+  background-position:  center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+.list{
+  @include flex-column();
+  gap: 8px;
+  height: 100%;
+
+  .caption{
+    @include text-Headline1();
+    color: $color-orange-60;
+  }
+
+  .text{
+    @include text-Subtitle3();
+    font-weight: 400;
+    color: $color-silver-30;
+  }
+}
+
+
+
+

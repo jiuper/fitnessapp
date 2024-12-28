@@ -1,0 +1,75 @@
+.card-calendar{
+  padding: 12px;
+  border-radius: 12px;
+  background: $color-orange-60;
+  height: fit-content;
+  overflow: hidden;
+
+  &.isFeedback{
+    background: $color-orange-30;
+  }
+  .wrapper{
+    @include flex-column();
+    gap: 12px;
+  }
+}
+
+.header{
+  @include flex-column();
+  color: $color-light;
+
+  .caption{
+    @include text-Subtitle4();
+    font-weight: 600;
+    color: $color-light;
+  }
+
+}
+.gen-price{
+  @include text-Overline();
+  color: $color-light;
+}
+
+.body{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: $color-light;
+  .count-services {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+
+    span {
+      @include text-Subtitle4();
+      color: $color-light;
+    }
+  }
+}
+.icon{
+  fill: $color-light;
+  width: 16px;
+  height: 16px;
+}
+.footer{
+  @include flex-column();
+  gap: 4px;
+
+  .avatar, .address{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: $color-light;
+
+    .icon{
+      width: 20px;
+      height: 20px;
+    }
+
+    span{
+      @include text-Overline();
+      color: $color-light;
+    }
+
+  }
+}

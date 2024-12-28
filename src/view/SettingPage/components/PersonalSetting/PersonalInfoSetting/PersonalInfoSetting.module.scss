@@ -1,0 +1,65 @@
+.form{
+  background: #F7F7F7;
+  @include flex-column();
+  gap: 24px;
+}
+.header{
+  display: flex;
+  align-items: center;
+  background: #fff;
+  gap: 12px;
+  padding: 12px 8px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+
+  .avatar{
+    position: relative;
+    .badge{
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: $color-orange-60;
+    }
+  }
+
+  .short-info{
+    @include flex-column();
+
+    .name{
+      @include text-Subtitle2();
+      color: $color-dark;
+    }
+    .post{
+      @include text-Body1();
+      color: $color-silver-30;
+    }
+  }
+}
+.body{
+  @include flex-column();
+  gap: 24px;
+
+  .account, .network, .list-services{
+    background: rgba(255, 255, 255, 1);
+    padding: 12px 8px;
+    @include flex-column();
+    gap: 16px;
+
+    .title{
+      @include text-Subtitle3();
+      color: $color-orange-60;
+    }
+
+    .list{
+      @include flex-column();
+      gap: 12px;
+
+    }
+  }
+
+  .list-services{
+    margin-bottom: 50px;
+    &.active{
+      margin-bottom: 130px;
+    }
+  }
+}

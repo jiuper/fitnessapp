@@ -1,0 +1,25 @@
+.wrapper{
+  @include flex-column();
+  gap: 8px;
+
+}
+.title{
+  @include text-Title();
+}
+.list{
+  @include flex-column();
+  gap: 8px;
+  margin-bottom: 130px;
+}
+.button{
+  padding: 16px;
+  @include flex-center();
+  border-radius: 44px;
+  background: $color-light;
+  box-shadow: 0px -1px 12px 0px rgba(255, 118, 72, 0.12);
+  backdrop-filter: blur(20px);
+
+  button{
+    width: 100%;
+  }
+}

@@ -1,0 +1,18 @@
+.wrapper{
+    @include flex-column();
+    gap: 8px;
+}
+.title{
+    @include text-Title();
+}
+.dropdown{
+    width: 100%;
+}
+.list{
+    @include flex-column();
+    gap: 8px;
+    margin-bottom: 80px;
+}
+.not-found{
+    @include text-Body1();
+}

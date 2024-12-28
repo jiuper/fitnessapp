@@ -1,0 +1,69 @@
+.wrapper{
+ @include flex-column();
+  gap: 8px;
+  height: 100%;
+}
+.header{
+  @include flex-column();
+  gap:8px;
+  padding: 8px;
+  @include flex-center();
+
+  .title{
+    @include text-Title();
+  }
+  .master-name{
+    width: 100%;
+    @include flex-center();
+    padding: 6px 24px;
+    flex: 1 0 0;
+    border-radius: 7px;
+    border: 0.5px solid rgba(0, 0, 0, 0.04);
+    background:  $color-light;
+    box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.12), 0px 3px 1px 0px rgba(0, 0, 0, 0.04);
+  }
+  .name{
+    @include text-Body2();
+    color: $color-dark;
+    font-weight: 600;
+  }
+}
+.content{
+  background: $color-light;
+  height: 100%;
+  padding: 8px;
+  border-radius: 16px 16px 0 0;
+  border-bottom:1px solid #F4EFF4;
+}
+.times-not{
+  @include flex-column();
+  @include flex-center();
+  gap: 4px;
+  margin-top: 48px;
+
+  .caption{
+    @include text-Subtitle2();
+    font-weight: 600;
+    color: $color-shading-60;
+  }
+  .title{
+    @include text-Body2();
+    color: $color-silver-30;
+    font-weight: 500;
+  }
+
+  .back{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.04);
+    padding: 12px;
+    margin-top: 24px;
+
+    span{
+      @include text-Body1();
+      color: $color-dark;
+    }
+  }
+}

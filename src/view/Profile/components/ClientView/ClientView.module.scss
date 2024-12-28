@@ -1,0 +1,116 @@
+.client-profile{
+  background: #fff;
+}
+.header{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 8px;
+  .short-info{
+    @include flex-column();
+
+    .name{
+      @include text-Subtitle2();
+      color: $color-dark;
+    }
+    .post{
+      @include text-Body1();
+      color: $color-silver-30;
+    }
+  }
+
+  .avatar{
+    position: relative;
+    .badge{
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: $color-orange-60;
+    }
+  }
+}
+
+.body {
+  @include flex-column();
+  gap: 8px;
+  background: #F7F7F7;
+  padding: 12px 8px;
+
+  .tab-menu{
+    @include flex-column();
+    gap: 8px;
+    border-radius: 12px;
+    background: #FFF;
+    padding: 0px 16px 16px 16px;
+
+    [data-pc-section="menu"]{
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+    [data-pc-section="menuitem"]{
+      flex: 1 1 50%;
+    }
+      [data-p-highlight="true"]{
+        [data-pc-section="action"]{
+          color: $color-orange-60;
+          border-color: $color-orange-60;
+
+        }
+      }
+    [data-pc-section="action"]{
+    display: flex;
+    justify-content: center
+    }
+    .dropdown{
+      width: 100%;
+    }
+
+
+    .description-wrapper{
+      @include flex-row();
+      gap: 8px;
+      .description{
+        @include flex-column();
+        justify-content: space-between;
+        width: 100%;
+        gap: 4px;
+        p{
+          @include text-Body1();
+          color: $color-silver-30;
+          span{
+            color: $color-dark;
+          }
+        }
+      }
+    }
+
+  }
+
+  .biometrics{
+    @include flex-column();
+    gap: 8px;
+  }
+
+  .charts{
+    @include flex-column();
+    gap: 8px;
+    .chart{
+      @include flex-column();
+      gap: 8px;
+      border-radius: 12px;
+      background: var(--UniversalPalette-fill-bg, #FFF);
+      box-shadow: 0px 2px 4px 0px rgba(255, 118, 72, 0.12), 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+      height: 240px;
+      padding: 16px;
+      span{
+        @include text-Subtitle4();
+        color:rgba(0, 0, 0, 0.9);
+      }
+      .chart-body{
+        height: 180px;
+      }
+    }
+
+  }
+}

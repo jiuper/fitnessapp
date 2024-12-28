@@ -1,0 +1,31 @@
+services:
+  dikidi_frontend:
+    image: dikidi_frontend
+    container_name: dikidi_frontend
+    labels:
+      - "io.portainer.accesscontrol.teams=bogoko"
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - ./ssl/letsencrypt:/etc/letsencrypt
+      - ./ssl/self-signed:/etc/nginx/ssl/self-signed
+      - ./ssl/mycerts:/etc/nginx/ssl/mycerts
+      - ./env-config.js:/usr/share/nginx/html/static/env-config.js
+    ports:
+      - 80:80
+      - 443:443
+    networks:
+      - dikidi
+    # environment:
+    #   - NGINX_SERVER_NAME=localhost
+    #   - NGINX_INTERNAL_API_URL=http://backend:3000
+    #   - NGINX_SECURE=false
+    #   - NGINX_SSL_CERTIFICATE=/etc/nginx/ssl/nginx.crt
+    #   - NGINX_SSL_CERTIFICATE_KEY=/etc/nginx/ssl/nginx.key
+    #   - LETSENCRYPT_EMAIL=your_email@your_domain.com
+
+networks:
+  dikidi:
+    external: true
+    name: dikidi

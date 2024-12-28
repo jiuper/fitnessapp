@@ -1,0 +1,37 @@
+.wrapper{
+  height: 100%;
+  @include flex-column();
+
+  button{
+    @include text-Subtitle2();
+    font-weight: 600;
+    border-radius: 62px;
+  }
+}
+.main-bonus {
+  background-image: url("@/shared/assets/image_2024-09-20_15-21-35.png");
+  background-position:  center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+.info{
+  @include flex-column();
+  gap: 16px;
+  background: $color-light;
+  padding: 12px 8px;
+  margin-bottom: 70px;
+
+  .item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+
+    .name{
+      @include text-Subtitle2();
+      color: $color-dark;
+    }
+  }
+}

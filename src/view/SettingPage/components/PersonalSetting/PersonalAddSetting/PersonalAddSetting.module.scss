@@ -1,0 +1,103 @@
+.form{
+  background: #F7F7F7;
+  @include flex-column();
+  gap: 24px;
+}
+.header{
+  display: flex;
+  align-items: center;
+  background: #fff;
+  gap: 12px;
+  padding: 12px 8px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+
+  .avatar{
+    position: relative;
+    .badge{
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: $color-orange-60;
+    }
+  }
+
+  .short-info{
+    @include flex-column();
+
+    .name{
+      @include text-Subtitle2();
+      color: $color-dark;
+    }
+    .post{
+      @include text-Body1();
+      color: $color-silver-30;
+    }
+  }
+}
+.body{
+  @include flex-column();
+  gap: 24px;
+
+  .account, .network, .list-services{
+    background: rgba(255, 255, 255, 1);
+    padding: 12px 8px;
+    @include flex-column();
+    gap: 16px;
+
+    .title{
+      @include text-Subtitle3();
+      color: $color-orange-60;
+    }
+
+    .list{
+      @include flex-column();
+      gap: 12px;
+
+      .message{
+        @include text-Subtitle3();
+        font-weight: 400;
+        color: $color-silver-60;
+      }
+
+
+
+      .card{
+        @include flex-row();
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        gap: 8px;
+        padding: 12px 12px 12px 8px;
+
+        span{
+          @include text-Subtitle2();
+          color: $color-shading-60;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          width: 287px;
+        }
+        .close{
+          width: 36px;
+          height: 36px;
+          @include flex-center();
+          border-radius: 50%;
+          cursor: pointer;
+          background: rgba(0, 0, 0, 0.04);
+
+          .close-icon{
+            fill: #404040;
+          }
+        }
+      }
+    }
+  }
+
+  .list-services:last-of-type{
+    margin-bottom: 50px;
+    &.active{
+      margin-bottom: 130px;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.wrapper{
+   @include flex-column();
+    gap: 8px;
+    padding: 8px;
+
+    .gym-list{
+        @include flex-column();
+        gap: 8px;
+
+        .list{
+          @include flex-column();
+          gap: 8px;
+        }
+
+      .list-staff{
+        @include flex-row();
+        gap: 8px;
+        width: 100%;
+        overflow: hidden;
+      }
+
+        .title-gym{
+          @include flex-row();
+          justify-content: space-between;
+          @include text-Subtitle3();
+          color: rgba(28, 27, 31, 1);
+        }
+
+        .title{
+            @include flex-row();
+            justify-content: space-between;
+            @include text-Subtitle3();
+            color: rgba(28, 27, 31, 1);
+
+            span:last-of-type{
+                color: $color-orange-60;
+            }
+
+        }
+    }
+
+  &:last-of-type{
+    margin-bottom: 80px;
+  }
+}
+
